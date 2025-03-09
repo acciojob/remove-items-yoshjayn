@@ -16,12 +16,18 @@
 				<option>White</option> 
 				<option>Black</option> 
 			</select> 
-			<input type="button" value="Select and Remove"> 
+			<input type="button" value="Select and Remove" onclick="removeSelected()"> 
 		</form>
 
-		<script type="text/javascript" src="./script.js">
+		<script>
+            function removeSelected() {
+                let select = document.getElementById("colorSelect");
+                let selectedIndex = select.selectedIndex; // Get the index of the selected option
+                if (selectedIndex !== -1) { // Check if an option is selected
+                    select.remove(selectedIndex); // Remove the selected option
+                }
+            }
 		</script>
 
 	</body>
-
 </html>
